@@ -17,6 +17,9 @@ No hay nada que instalar: las fuentes (Anton, Yellowtail, Outfit) y GSAP van inc
 
     index.html          Toda la página
     css/style.css       Estilos base (tokens de color y tipografía arriba del todo)
+    tienda.html         Tienda online (pokes, wraps, gyozas, postres y bebidas)
+    css/tienda.css      Estilos de la tienda
+    js/shop.js          Productos, personalización, bolsa y pedido (CONFIG arriba: WhatsApp, horario)
     css/personalidad.css  Capa de carácter de marca: grano de papel, ondas, sello, wrap, chips y nav
     js/main.js          Interacciones (GSAP + ScrollTrigger)
     assets/img/         Logo, tortuga, stickers recortados del pliego de marca, fotogramas de los vídeos
@@ -52,3 +55,10 @@ No hay nada que instalar: las fuentes (Anton, Yellowtail, Outfit) y GSAP van inc
 - Respeta `prefers-reduced-motion`.
 - El scroll suave de los enlaces va en JS: con `scroll-behavior:smooth` en CSS, ScrollTrigger mide mal al refrescar.
 - Datos estructurados schema.org `Restaurant` con dirección, horario y valoración.
+
+## Tienda (`tienda.html`)
+
+- Los productos y precios están en `js/shop.js` (`PRODUCTS`). Los pokes de la casa, el haz tu poke, el wrap, las gyozas, los postres y las bebidas salen de la carta de febrero.
+- La bolsa se guarda en el navegador (`localStorage`). Se elige la hora de recogida dentro del horario; el pago es en el local.
+- **La web no cobra ni envía pedidos sola** (es una página estática). Al preparar el pedido: si en `CONFIG.whatsapp` hay un número, aparece el botón "Enviar por WhatsApp" con el pedido ya escrito; si está vacío, se ofrece copiar el pedido o llamar al local.
+- **Precio de los pokes de la casa**: la carta solo da el del menú (15,90 / 16,90 €). Se usa 11,90 € (el del "haz tu poke") y el menú suma 4 €, que cuadra con las dos tarifas. Confirmar con el local y cambiar `POKE_PRICE` si procede.

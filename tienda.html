@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda · Honu Poké & More · Pide tu poke online y recógelo</title>
+<meta name="description" content="Elige un poke de la casa o móntalo a tu gusto, añade wraps, gyozas, postres y bebidas, y recógelo en Honu Poké & More, San Vicente del Raspeig.">
+<meta name="theme-color" content="#1B4736">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tienda · Honu Poké & More">
+<meta property="og:description" content="Pide tu poke online y recógelo en el local.">
+<meta property="og:image" content="https://makeweb0.github.io/honu-poke/assets/img/og.jpg">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/personalidad.css">
+<link rel="stylesheet" href="css/tienda.css">
+</head>
+<body id="top" class="shop">
+
+<a class="skip-link" href="#pokes">Saltar al contenido</a>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Honu Poké & More, inicio">
+    <span class="logo-word" role="img" aria-label="Honu Poke and More"></span>
+  </a>
+
+  <nav class="nav__links" aria-label="Principal">
+    <a href="index.html">Inicio</a>
+    <a href="index.html#carta">La carta</a>
+    <a href="tienda.html" class="is-here">Tienda</a>
+    <a href="index.html#visita">Dónde</a>
+  </nav>
+
+  <div class="nav__right">
+    <button class="btn btn--sm nav__cta bag-btn" id="bag-open" type="button"><span>Mi bolsa <b id="bag-count" class="bag-count">0</b></span></button>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu-panel">
+      <span class="burger__bar"></span><span class="burger__bar"></span><span class="burger__bar"></span>
+      <span class="sr">Abrir el menú de navegación</span>
+    </button>
+  </div>
+</header>
+
+<!-- PANEL MÓVIL -->
+<div class="panel" id="menu-panel" role="dialog" aria-modal="true" aria-label="Navegación">
+  <nav>
+    <a href="index.html"><em>01</em>Inicio</a>
+    <a href="index.html#carta"><em>02</em>La carta</a>
+    <a href="tienda.html"><em>03</em>Tienda</a>
+    <a href="index.html#visita"><em>04</em>Dónde</a>
+  </nav>
+  <div class="panel__foot">
+    <span>C. del Aeroplano, 4 · San Vicente del Raspeig</span>
+    <a href="tel:+34865795988">865 79 59 88</a>
+    <a href="https://www.instagram.com/honu.poke/" target="_blank" rel="noopener">@honu.poke</a>
+  </div>
+</div>
+
+<main>
+
+<!-- CABECERA -->
+<section class="shophead">
+  <div class="shophead__sun" aria-hidden="true"><svg data-sun viewBox="-100 -100 200 200"></svg></div>
+  <div class="wrap shophead__grid">
+    <div>
+      <p class="shophead__kicker script">Tienda online</p>
+      <h1 class="shophead__title">
+        <span class="l1">Elige,</span>
+        <span class="l2">monta</span>
+        <span class="l3"><b class="strip">y recoge</b></span>
+      </h1>
+      <p class="shophead__sub">Haz tu pedido desde el móvil y pasa a recogerlo al local. Sin registrarte.</p>
+    </div>
+
+    <aside class="ticket" aria-label="Cómo funciona">
+      <h2>Así va</h2>
+      <ol>
+        <li><span>1</span>Elige o monta tu poke, wrap o lo que te apetezca.</li>
+        <li><span>2</span>Dinos tu nombre, tu teléfono y a qué hora pasas.</li>
+        <li><span>3</span>Lo preparamos y lo recoges en el local. Pagas ahí.</li>
+      </ol>
+      <p class="ticket__addr">C. del Aeroplano, 4, Local 2<br>Todos los días 13–16 y 20–23:30</p>
+      <img class="sticker ticket__sticker" src="assets/img/sticker-heart-pink.png" alt="" width="295" height="268">
+    </aside>
+  </div>
+</section>
+
+<!-- CATEGORÍAS -->
+<nav class="cats" aria-label="Categorías de la tienda" id="cats">
+  <div class="wrap cats__row">
+    <a href="#pokes" data-cat="pokes">Pokes de la casa</a>
+    <a href="#tuyo" data-cat="tuyo">Hazlo a tu manera</a>
+    <a href="#compartir" data-cat="compartir">Para compartir</a>
+    <a href="#postres" data-cat="postres">Postres y bebidas</a>
+  </div>
+</nav>
+
+<noscript><p class="noscript">Para usar la tienda necesitas activar JavaScript. También puedes pedir llamando al <a href="tel:+34865795988">865 79 59 88</a> o por <a href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA">Uber Eats</a>.</p></noscript>
+
+<!-- PRODUCTOS (los pinta shop.js) -->
+<section class="shopsec" id="pokes">
+  <div class="wrap">
+    <header class="shopsec__head"><p class="script">Los ocho</p><h2>Pokes de la casa</h2><p class="shopsec__note">Mediano o grande. Elige tu base y, si quieres, hazlo menú con bebida y postre.</p></header>
+    <div class="goods" id="list-casa"></div>
+  </div>
+</section>
+
+<section class="shopsec shopsec--alt" id="tuyo">
+  <div class="wrap">
+    <header class="shopsec__head"><p class="script">Tus reglas</p><h2>Hazlo a tu manera</h2><p class="shopsec__note">Cinco pasos: base, salsa, proteína, toppings y crujientes.</p></header>
+    <div class="features" id="list-tuyo"></div>
+  </div>
+</section>
+
+<section class="shopsec" id="compartir">
+  <div class="wrap">
+    <header class="shopsec__head"><p class="script">Para picar</p><h2>Para compartir</h2></header>
+    <div class="goods goods--slim" id="list-compartir"></div>
+  </div>
+</section>
+
+<section class="shopsec shopsec--alt" id="postres">
+  <div class="wrap">
+    <header class="shopsec__head"><p class="script">Para rematar</p><h2>Postres y bebidas</h2></header>
+    <div class="rows" id="list-postres"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot" id="contacto">
+  <div class="wrap">
+    <div class="foot__row">
+      <span class="logo-word" role="img" aria-label="Honu Poke and More"></span>
+      <p class="foot__tag">Es saludable, pero sabe a capricho.</p>
+      <nav class="foot__nav" aria-label="Pie">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#carta">Carta</a>
+        <a href="index.html#visita">Dónde</a>
+        <a href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA" target="_blank" rel="noopener">Uber Eats</a>
+      </nav>
+    </div>
+    <div class="foot__bar">
+      <p>© <span id="year">2026</span> Honu Poké &amp; More · C. del Aeroplano, 4, San Vicente del Raspeig</p>
+      <p><a href="#top">Volver arriba</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante de la bolsa (móvil) -->
+<button class="bag-fab" id="bag-fab" type="button" aria-label="Abrir mi bolsa" hidden>
+  <img src="assets/img/sticker-heart-yellow.png" alt="" width="297" height="268">
+  <b id="bag-fab-count">0</b>
+</button>
+
+<!-- PERSONALIZAR PRODUCTO -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet__scrim" data-close-sheet></div>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <header class="sheet__head">
+      <div>
+        <p class="sheet__sauce" id="sheet-sub"></p>
+        <h2 id="sheet-title"></h2>
+      </div>
+      <button class="x" type="button" data-close-sheet aria-label="Cerrar">×</button>
+    </header>
+    <div class="sheet__body" id="sheet-body"></div>
+    <footer class="sheet__foot">
+      <p class="sheet__miss" id="sheet-miss" hidden></p>
+      <div class="sheet__buy">
+        <div class="stepper" aria-label="Cantidad">
+          <button type="button" id="q-minus" aria-label="Menos">−</button>
+          <output id="q-out">1</output>
+          <button type="button" id="q-plus" aria-label="Más">+</button>
+        </div>
+        <button class="btn btn--pink" type="button" id="sheet-add"><span>Añadir · <b id="sheet-total">0,00 €</b></span></button>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- BOLSA -->
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__scrim" data-close-drawer></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <header class="drawer__head">
+      <h2 id="drawer-title">Mi bolsa</h2>
+      <button class="x" type="button" data-close-drawer aria-label="Cerrar">×</button>
+    </header>
+
+    <div class="drawer__scroll" id="drawer-scroll">
+      <div id="view-bag">
+        <p class="bag-empty" id="bag-empty">Tu bolsa está vacía. <a href="#pokes" data-close-drawer>Elige tu primer poke</a>.</p>
+        <ul class="bag-items" id="bag-items"></ul>
+
+        <form class="order" id="order-form" novalidate hidden>
+          <h3>Tus datos</h3>
+          <label class="field"><span>Nombre</span><input id="f-name" name="name" type="text" autocomplete="name" required></label>
+          <label class="field"><span>Teléfono</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+          <label class="field"><span>¿Cuándo pasas?</span><select id="f-time" name="time"></select></label>
+          <label class="field"><span>Algo que debamos saber <i>(alergias, sin cebolla…)</i></span><textarea id="f-note" name="note" rows="2"></textarea></label>
+          <p class="order__err" id="order-err" hidden></p>
+        </form>
+      </div>
+
+      <div id="view-done" hidden>
+        <h3 class="done__title">Pedido preparado</h3>
+        <p class="done__lead" id="done-lead"></p>
+        <pre class="done__msg" id="done-msg"></pre>
+        <div class="done__btns">
+          <a class="btn btn--pink" id="done-wa" target="_blank" rel="noopener" hidden><span>Enviar por WhatsApp</span></a>
+          <button class="btn" type="button" id="done-copy"><span>Copiar pedido</span></button>
+          <a class="btn btn--ghost" href="tel:+34865795988"><span>Llamar al 865 79 59 88</span></a>
+          <button class="link done__new" type="button" id="done-new">Empezar un pedido nuevo</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="drawer__foot" id="drawer-foot" hidden>
+      <p class="drawer__total"><span>Total</span><strong id="bag-total">0,00 €</strong></p>
+      <button class="btn btn--pink" type="button" id="order-go"><span>Preparar mi pedido</span></button>
+      <p class="drawer__fine">Recoges en el local y pagas ahí.</p>
+    </footer>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
