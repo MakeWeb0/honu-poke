@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honu Poké & More · Pokes, wraps y gyozas en San Vicente del Raspeig</title>
+<meta name="description" content="Pokes de la casa o hechos a tu gusto, wraps, gyozas y tartas de queso caseras en San Vicente del Raspeig. Saludable, pero sabe a capricho. Pide en el local o en Uber Eats.">
+<meta name="theme-color" content="#1B4736">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Honu Poké & More · Pokes, wraps y gyozas">
+<meta property="og:description" content="Pokes, wraps y gyozas en San Vicente del Raspeig. Es saludable, pero sabe a capricho.">
+<meta property="og:image" content="https://makeweb0.github.io/honu-poke/assets/img/og.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/personalidad.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Honu Poké & More",
+  "servesCuisine": ["Poke", "Hawaiana", "Saludable", "Vegana"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle del Aeroplano, 4, Local 2",
+    "postalCode": "03690",
+    "addressLocality": "San Vicente del Raspeig",
+    "addressRegion": "Alicante",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34865795988",
+  "priceRange": "€€",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "404" },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "13:00", "closes": "16:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "20:00", "closes": "23:30"
+  }],
+  "sameAs": ["https://www.instagram.com/honu.poke/"]
+}
+</script>
+</head>
+<body id="top">
+
+<a class="skip-link" href="#nosotros">Saltar al contenido</a>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" aria-label="Honu Poké & More, inicio">
+    <span class="logo-word" role="img" aria-label="Honu Poke and More"></span>
+  </a>
+
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#carta" data-tab="t-casa">La carta</a>
+    <a href="#carta" data-tab="t-monta">Monta tu bowl</a>
+    <a href="#proceso">Cómo lo hacemos</a>
+    <a href="#visita">Dónde</a>
+  </nav>
+
+  <div class="nav__right">
+    <p class="nav__status">Todos los días <b>13–16</b> y <b>20–23:30</b></p>
+    <a class="btn btn--sm nav__cta" href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA" target="_blank" rel="noopener"><span>Pide ya</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu-panel">
+      <span class="burger__bar"></span><span class="burger__bar"></span><span class="burger__bar"></span>
+      <span class="sr">Abrir el menú de navegación</span>
+    </button>
+  </div>
+</header>
+
+<!-- PANEL MÓVIL -->
+<div class="panel" id="menu-panel" role="dialog" aria-modal="true" aria-label="Navegación">
+  <svg class="panel__sun" data-sun viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+  <nav>
+    <a href="#carta" data-tab="t-casa"><em>01</em>La carta</a>
+    <a href="#carta" data-tab="t-monta"><em>02</em>Monta tu bowl</a>
+    <a href="#proceso"><em>03</em>Cómo lo hacemos</a>
+    <a href="#visita"><em>04</em>Dónde</a>
+  </nav>
+  <div class="panel__foot">
+    <span>C. del Aeroplano, 4 · San Vicente del Raspeig</span>
+    <a href="tel:+34865795988">865 79 59 88</a>
+    <a href="https://www.instagram.com/honu.poke/" target="_blank" rel="noopener">@honu.poke</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero__sun" aria-hidden="true"><svg data-sun viewBox="-100 -100 200 200"></svg></div>
+
+  <div class="hero__grid">
+    <div class="hero__text">
+      <p class="hero__place"><span class="turtle turtle--sm" aria-hidden="true"></span> San Vicente del Raspeig · Poke &amp; more</p>
+      <h1 class="hero__title">
+        <span class="line l1"><span>Tu bowl,</span></span>
+        <span class="line l2"><span>tus reglas.</span></span>
+        <span class="line l3"><span><b class="strip">Be Honu!</b></span></span>
+      </h1>
+      <p class="hero__sub">Pokes de la casa o montados a tu gusto, wraps, gyozas y tartas de queso caseras. Es saludable, pero sabe a capricho.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#carta" data-tab="t-monta"><span>Monta tu poke</span></a>
+        <a class="btn btn--ghost" href="#carta" data-tab="t-casa"><span>Ver la carta</span></a>
+        <a class="link" href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA" target="_blank" rel="noopener">o pide en Uber Eats →</a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <a class="hero__rating" href="https://www.google.com/search?hl=es-ES&gl=es&q=Honu+Pok%C3%A9,+C.+del+Aeroplano,+4,+03690+Alicante&ludocid=552835465339399173" target="_blank" rel="noopener">
+        <b>4,8</b><span class="star" aria-hidden="true">★</span> 404 reseñas en Google
+      </a>
+      <svg class="leek leek--l" viewBox="-48 228 96 430" aria-hidden="true"><path d="M-13 650 L-13 330 C-13 290 -22 262 -40 238 C-18 246 -5 258 0 282 C5 258 18 246 40 238 C22 262 13 290 13 330 L13 650 Z"/></svg>
+      <svg class="leek leek--r" viewBox="-48 228 96 430" aria-hidden="true"><path d="M-13 650 L-13 330 C-13 290 -22 262 -40 238 C-18 246 -5 258 0 282 C5 258 18 246 40 238 C22 262 13 290 13 330 L13 650 Z"/></svg>
+      <div class="arch hero__arch">
+        <video id="hero-video" src="assets/video/hero.mp4" poster="assets/img/bowl-salmon.jpg" muted loop playsinline preload="auto" aria-label="Montando un poke de salmón en el mostrador"></video>
+      </div>
+      <img class="sticker sticker--heart" src="assets/img/sticker-heart-yellow.png" alt="" width="297" height="268">
+      <img class="sticker sticker--oval" src="assets/img/sticker-oval-yellow.png" alt="Be Honu!" width="401" height="181">
+      <img class="sticker sticker--globe" src="assets/img/sticker-globe-pink.png" alt="" width="272" height="267">
+    </div>
+  </div>
+
+</section>
+
+<!-- sello giratorio entre el hero y la siguiente sección -->
+<div class="band-wrap">
+  <div class="stamp" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="98" class="stamp__bg"/>
+      <defs><path id="stamp-ring" d="M100 100 m-72 0 a72 72 0 1 1 144 0 a72 72 0 1 1 -144 0"/></defs>
+      <text class="stamp__txt" font-size="21"><textPath href="#stamp-ring" textLength="445" lengthAdjust="spacing">BE HONU ✦ BE HONU ✦ BE HONU ✦ </textPath></text>
+      <image href="assets/img/turtle.png" x="58" y="72" width="84" height="67"/>
+    </svg>
+  </div>
+</div>
+
+<!-- SOBRE NOSOTROS -->
+<section class="about" id="nosotros">
+  <div class="wrap">
+    <div class="about__grid">
+      <div class="about__media">
+        <div class="arch about__arch"><img src="assets/img/bowl-final.jpg" alt="Poke con salmón, mango, edamame, aguacate y pipas de calabaza sostenido con las dos manos" loading="lazy" width="720" height="1280" style="object-position:50% 62%"></div>
+        <img class="sticker sticker--globe" src="assets/img/sticker-globe-green.png" alt="" loading="lazy" width="273" height="269">
+        <img class="sticker sticker--heart" src="assets/img/sticker-heart-pink.png" alt="" loading="lazy" width="295" height="268">
+      </div>
+      <div class="about__copy">
+        <p class="about__kicker script">Honu, la tortuga</p>
+        <h2 class="about__title reveal-words">Es saludable, pero sabe a <em>capricho.</em></h2>
+        <p class="about__lead">En hawaiano, <strong>honu</strong> es la tortuga: calma, buena suerte y buenas vibraciones. Es lo que queremos que se lleve quien sale por la puerta con un bowl.</p>
+        <p class="about__text">Aquí no hay un único poke: hay ocho de la casa y, si lo prefieres, el tuyo. Elige la base, la salsa, la proteína, los toppings y los crujientes.</p>
+      </div>
+    </div>
+
+    <div class="about__run">
+      <p><span>Pollo casero.</span> <span>Tarta de queso casera.</span> <span>Gyozas.</span> <span>Tofu marinado.</span> <span>Sirachamayo vegana.</span> <span>Wraps calientes o fríos.</span></p>
+      <p class="about__run-note">Todo se monta en el mostrador, a la vista: base, salsa, proteína, toppings y crujientes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section class="carta" id="carta">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-kicker script">Elige y monta</p>
+      <h2 class="sec-title reveal-words">La carta</h2>
+      <p class="sec-note">Precios del local. En Uber Eats pueden variar.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Secciones de la carta">
+      <button role="tab" aria-selected="true"  aria-controls="t-casa"  id="tab-casa">Pokes de la casa</button>
+      <button role="tab" aria-selected="false" aria-controls="t-monta" id="tab-monta">Monta tu bowl</button>
+      <button role="tab" aria-selected="false" aria-controls="t-menu"  id="tab-menu">Menú, postres y bebidas</button>
+    </div>
+
+    <!-- POKES DE LA CASA -->
+    <div class="tabpanel" id="t-casa" role="tabpanel" aria-labelledby="tab-casa">
+      <div class="deal">
+        <div class="deal__l">
+          <span class="script">Hazlo menú</span>
+          <p class="deal__eq">Poke <i>+</i> Bebida <i>+</i> Postre</p>
+        </div>
+        <div class="deal__prices">
+          <p><span>Mediano</span><b>15,90<em>€</em></b></p>
+          <p><span>Grande</span><b>16,90<em>€</em></b></p>
+        </div>
+      </div>
+      <p class="base-note"><b>Base</b><span>Arroz sushi, arroz integral, quinoa, arroz negro o mézclum de lechugas · hasta 2 ingredientes</span></p>
+
+      <div class="pokes">
+        <article class="poke">
+          <h3>Honu</h3>
+          <p class="poke__sauce">Salsa curry mango</p>
+          <p class="poke__ing">Pollo casero troceado, aguacate, tomate cherry, edamame, mango y polvo de kikos.</p>
+        </article>
+        <article class="poke">
+          <h3>Maui</h3>
+          <p class="poke__sauce">Salsa teriyaki</p>
+          <p class="poke__ing">Salmón, mango, aguacate, queso crema, cebolla morada y crujiente de nueces.</p>
+        </article>
+        <article class="poke">
+          <h3>Oahu</h3>
+          <p class="poke__sauce">Salsa spicymayo</p>
+          <p class="poke__ing">Atún, bolas de mozzarella, wakame, mango, cebolla caramelizada y crujiente de chía.</p>
+        </article>
+        <article class="poke">
+          <h3>Aya</h3>
+          <p class="poke__sauce">Salsa curry mayo</p>
+          <p class="poke__ing">Gamba, huevo duro, pepino, cebolla encurtida, aguacate y crujiente de pipas de calabaza.</p>
+        </article>
+        <article class="poke">
+          <h3>Wiki Liki Hot</h3>
+          <p class="poke__sauce">Salsa spicy mayo</p>
+          <p class="poke__ing">Atún macerado en siracha, queso crema, cebolla morada, aguacate, mango, picadillo de jalapeños y crujiente de sésamo caramelizado.</p>
+          <div class="poke__tags"><span class="hot">Pica</span></div>
+        </article>
+        <article class="poke">
+          <h3>Ío</h3>
+          <p class="poke__sauce">Salsa miel mostaza</p>
+          <p class="poke__ing">Pulled pork BBQ desmenuzado, pepino, cebolla morada, piña, tomate cherry y crujiente de cacahuete.</p>
+        </article>
+        <article class="poke">
+          <h3>Moana</h3>
+          <p class="poke__sauce">Salsa mayo pesto</p>
+          <p class="poke__ing">Salmón y atún macerados en limón, queso feta, wakame, mango, cebolla encurtida y crujiente de arroz inflado.</p>
+        </article>
+        <article class="poke">
+          <h3>Aina</h3>
+          <p class="poke__sauce">Salsa mayo trufa</p>
+          <p class="poke__ing">Tofu marinado, piña, edamame, cebolla morada, aguacate y crujiente mix de sésamo.</p>
+          <div class="poke__tags"><span class="veg">Con tofu</span></div>
+        </article>
+      </div>
+
+      <div class="extras">
+        <div class="extras__col">
+          <h4>Extras</h4>
+          <span class="extras__item">Extra de salsa<b>+0,40&nbsp;€</b></span>
+          <span class="extras__item">Aceite o picantes<b>+0,50&nbsp;€</b></span>
+          <span class="extras__item">Extra proteína<b>+2&nbsp;€</b></span>
+          <span class="extras__item">Extra topping<b>+1&nbsp;€</b></span>
+        </div>
+        <div class="extras__col extras__col--y">
+          <h4>2.ª unidad</h4>
+          <span class="extras__item">Aguacate<b>+1&nbsp;€</b></span>
+          <span class="extras__item">Queso feta<b>+1&nbsp;€</b></span>
+          <span class="extras__item">Mozzarella<b>+1&nbsp;€</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONTA TU BOWL (se pinta con JS) -->
+    <div class="tabpanel" id="t-monta" role="tabpanel" aria-labelledby="tab-monta" hidden>
+      <div class="bld" id="builder">
+        <div class="bld__main">
+          <div class="bld__bar">
+            <div class="group"><span>¿Qué te apetece?</span>
+              <div class="seg" id="seg-kind" role="group" aria-label="Tipo">
+                <button type="button" data-kind="poke" aria-pressed="true">Poke</button>
+                <button type="button" data-kind="wrap" aria-pressed="false">Wrap</button>
+              </div>
+            </div>
+            <div class="group" id="grp-size"><span>Tamaño</span>
+              <div class="seg seg--pink" id="seg-size" role="group" aria-label="Tamaño"></div>
+            </div>
+            <div class="group" id="grp-temp" hidden><span>Temperatura</span>
+              <div class="seg seg--pink" id="seg-temp" role="group" aria-label="Temperatura">
+                <button type="button" data-temp="Caliente" aria-pressed="true">Caliente</button>
+                <button type="button" data-temp="Frío" aria-pressed="false">Frío</button>
+              </div>
+            </div>
+          </div>
+          <div id="steps"></div>
+          <div class="xtras" id="xtras"></div>
+        </div>
+
+        <aside class="sum" aria-live="polite">
+          <h3>Tu <span id="sum-kind">poke</span></h3>
+          <p class="sum__sub" id="sum-size">Mediano</p>
+          <ul class="sum__list" id="sum-list"></ul>
+          <label class="menu-toggle"><input type="checkbox" id="menu-on"><span class="box" aria-hidden="true"></span>
+            <span><b>Hazlo menú</b><br><span id="menu-desc">+ bebida + postre</span></span></label>
+          <p class="sum__miss" id="sum-miss" hidden></p>
+          <p class="sum__total"><span>Total</span><strong id="sum-total">11,90&nbsp;€</strong></p>
+          <div class="sum__btns">
+            <a class="btn btn--pink" href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA" target="_blank" rel="noopener"><span>Pedir en Uber Eats</span></a>
+            <button class="btn btn--green" type="button" id="copy"><span>Copiar mi pedido</span></button>
+            <a class="btn btn--line" href="tel:+34865795988"><span>Llamar al local</span></a>
+          </div>
+          <p class="sum__hint">Copia tu pedido y dícelo en el local o por teléfono. En Uber Eats lo montas con sus opciones.</p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- MENÚ, POSTRES Y BEBIDAS -->
+    <div class="tabpanel" id="t-menu" role="tabpanel" aria-labelledby="tab-menu" hidden>
+      <div class="menu-grid">
+        <article class="mcard mcard--y">
+          <h3>Completa tu menú</h3>
+          <p class="big">Poke <i>+</i> Bebida <i>+</i> Postre</p>
+          <p class="prices"><span>Mediano 15,90&nbsp;€</span><span>Grande 16,90&nbsp;€</span></p>
+          <p class="big">Wrap <i>+</i> Bebida <i>+</i> Postre</p>
+          <p class="prices"><span>Menú 14,50&nbsp;€</span></p>
+        </article>
+
+        <article class="mcard">
+          <h3>Postres menú</h3>
+          <ul class="mlist">
+            <li><span>Tarta de queso casera</span></li>
+            <li><span>Tarta de queso y pistacho casera</span></li>
+            <li><span>Tarta de queso y Kinder casera</span></li>
+            <li><span>Yogurfruit <span class="tag">Nuevo</span><i>Yogur, granola, mango, kiwi y plátano. Crema a elegir: miel, chocolate o pistacho.</i></span><b>+1&nbsp;€</b></li>
+          </ul>
+        </article>
+
+        <article class="mcard mcard--s">
+          <h3>Refrescos y cervezas</h3>
+          <p><strong>Refrescos menú:</strong> agua, Coca-Cola, Aquarius, Nestea o Fanta.</p>
+          <p><strong>Cervezas menú:</strong> Mahou 5 Estrellas o Mahou Tostada 00. <b style="color:var(--pink)">+0,50&nbsp;€</b></p>
+        </article>
+
+        <article class="mcard mcard--g">
+          <h3>Para compartir</h3>
+          <ul class="mlist">
+            <li><span>Gyozas de pollo y vegetales</span><b>5,90&nbsp;€</b></li>
+            <li><span>Gyozas de cerdo y vegetales</span><b>5,90&nbsp;€</b></li>
+            <li><span>Gyozas vegetales</span><b>5,90&nbsp;€</b></li>
+          </ul>
+        </article>
+
+        <article class="mcard">
+          <h3>Bebidas y postres</h3>
+          <ul class="mlist">
+            <li><span>Agua</span><b>1,50&nbsp;€</b></li>
+            <li><span>Refresco</span><b>1,70&nbsp;€</b></li>
+            <li><span>Cerveza</span><b>2,60&nbsp;€</b></li>
+            <li><span>Cerveza 00</span><b>2,90&nbsp;€</b></li>
+            <li><span>Postres</span><b>4,90&nbsp;€</b></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <p class="carta__pdf">¿Prefieres la carta de siempre? <a class="link" href="assets/Carta_HonuPoke_Febrero.pdf" target="_blank" rel="noopener">Ábrela en PDF</a></p>
+  </div>
+</section>
+
+<!-- CÓMO LO HACEMOS -->
+<section class="proc" id="proceso">
+  <span class="proc__wm turtle" aria-hidden="true"></span>
+
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-kicker script">Mira cómo se hace</p>
+      <h2 class="sec-title reveal-words">Cómo lo hacemos</h2>
+      <p class="sec-note" style="color:var(--cream)">Todo se monta en el mostrador, a la vista. Pulsa en cualquiera y lo verás hacerse paso a paso.</p>
+    </header>
+
+    <!-- 1. POKE DE SALMÓN -->
+    <article class="reel" id="reel-poke">
+      <div class="reel__media">
+        <div class="arch arch--reel">
+          <video class="reel__video" src="assets/video/bowl-salmon.mp4" muted loop playsinline preload="none" tabindex="-1"></video>
+          <img class="reel__still" src="assets/img/bowl-final.jpg" alt="Poke terminado con salmón, mango, edamame y pipas de calabaza" style="object-position:50% 62%">
+          <button class="reel__btn" type="button"><span class="reel__ico" aria-hidden="true"></span><span>Ver cómo se hace</span></button>
+          <span class="reel__sound" aria-hidden="true">Sonido</span>
+        </div>
+        <div class="reel__bar" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="reel__info">
+        <p class="reel__eyebrow script">El bowl</p>
+        <h3>Salmón, mango y edamame</h3>
+        <p class="reel__lead">Base, proteína y toppings por colores, el hilo de salsa y un crujiente por encima.</p>
+        <ol class="steps" data-steps="0.8,2|2,3|3,4.2|4.2,6.4">
+          <li><span class="steps__mark" aria-hidden="true"></span>Salmón, mango, edamame y aguacate</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>El hilo de salsa</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Crujiente de pipas de calabaza</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Y a la mesa</li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- 2. WRAP -->
+    <article class="reel reel--flip reel--wrap" id="reel-wrap">
+      <div class="reel__media">
+        <div class="arch arch--reel">
+          <video class="reel__video" src="assets/video/wrap.mp4" muted loop playsinline preload="none" tabindex="-1"></video>
+          <img class="reel__still" src="assets/img/wrap-corte.jpg" alt="Wrap cortado por la mitad" style="object-position:50% 62%">
+          <button class="reel__btn" type="button"><span class="reel__ico" aria-hidden="true"></span><span>Ver cómo se hace</span></button>
+          <span class="reel__sound" aria-hidden="true">Sonido</span>
+        </div>
+        <div class="reel__bar" aria-hidden="true"><i></i></div>
+        <img class="sticker wrap__heart" src="assets/img/sticker-heart-pink.png" alt="" loading="lazy" width="295" height="268">
+        <img class="sticker wrap__oval" src="assets/img/sticker-oval-green.png" alt="" loading="lazy" width="381" height="182">
+      </div>
+      <div class="reel__info">
+        <p class="reel__eyebrow script">Haz tu</p>
+        <h3 class="wrap__title">Wrap<span class="strip">caliente o frío</span></h3>
+        <p class="wrap__price"><b>10,50<em>€</em></b><span>o en menú, con bebida y postre,<br>por <strong>14,50&nbsp;€</strong></span></p>
+        <p class="reel__lead">Eliges la base, la proteína, los toppings, la salsa y el crujiente. Lo rellenamos, lo enrollamos bien apretado y te lo cortamos por la mitad.</p>
+        <ol class="steps" data-steps="0,1.8|1.8,4|4,7|7,8.6|8.6,10.8">
+          <li><span class="steps__mark" aria-hidden="true"></span>El relleno, sobre la tortilla</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Se dobla</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Se enrolla bien apretado</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Un corte por la mitad</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Listo para comer</li>
+        </ol>
+        <a class="btn btn--green wrap__cta" href="#carta" data-tab="t-monta" data-kind="wrap"><span>Montar mi wrap</span></a>
+      </div>
+    </article>
+
+    <!-- 3. PARA LLEVAR -->
+    <article class="reel" id="reel-llevar">
+      <div class="reel__media">
+        <div class="arch arch--reel">
+          <video class="reel__video" src="assets/video/bowl-llevar.mp4" muted loop playsinline preload="none" tabindex="-1"></video>
+          <img class="reel__still" src="assets/img/bowl-llevar-sticker.jpg" alt="Bowl cerrado con tapa transparente y el sticker de Honu Poke and More" style="object-position:50% 62%">
+          <button class="reel__btn" type="button"><span class="reel__ico" aria-hidden="true"></span><span>Ver cómo se hace</span></button>
+          <span class="reel__sound" aria-hidden="true">Sonido</span>
+        </div>
+        <div class="reel__bar" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="reel__info">
+        <p class="reel__eyebrow script">Para llevar</p>
+        <h3>Tu bowl, sellado y listo</h3>
+        <p class="reel__lead">Lo montamos igual que si te lo comieras aquí y lo cerramos con tapa y nuestro sticker. Para la oficina, para casa o para después del entreno.</p>
+        <ol class="steps" data-steps="0,1.3|1.3,2.3|2.3,4|4,6|6,9.6">
+          <li><span class="steps__mark" aria-hidden="true"></span>Base y proteína</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Toppings frescos</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>La salsa que tú elijas</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Crujientes por encima</li>
+          <li><span class="steps__mark" aria-hidden="true"></span>Tapa, sticker y a por él</li>
+        </ol>
+      </div>
+    </article>
+
+    <div class="proc__cta">
+      <img class="sticker" src="assets/img/sticker-heart-yellow.png" alt="" loading="lazy" width="297" height="268">
+      <h3>Síguenos en Instagram</h3>
+      <p>Subimos los bowls, los wraps y las novedades de la carta, como el nuevo Yogurfruit.</p>
+      <div class="proc__cta-btns">
+        <a class="btn" href="https://www.instagram.com/honu.poke/" target="_blank" rel="noopener"><span>Instagram @honu.poke</span></a>
+        <a class="btn btn--ghost" href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA" target="_blank" rel="noopener"><span>Pedir en Uber Eats</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="revs" id="resenas">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-title reveal-words">Lo que dicen</h2>
+    </header>
+
+    <div class="revs__grid">
+      <div class="score">
+        <div class="score__num"><span class="count" data-to="4.8" data-dec="1">0,0</span></div>
+        <div class="score__stars" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p>404 reseñas en Google</p>
+        <a class="btn" href="https://www.google.com/search?hl=es-ES&gl=es&q=Honu+Pok%C3%A9,+C.+del+Aeroplano,+4,+03690+Alicante&ludocid=552835465339399173" target="_blank" rel="noopener"><span>Léelas en Google</span></a>
+      </div>
+      <blockquote class="quote">
+        <p>Comida sana y buenísima, sitio acogedor y la atención inmejorable. Siempre que quiero pillar algo rápido para comer o cenar en casa no dudo en venir aquí.</p>
+        <footer>Reseña en Tripadvisor</footer>
+      </blockquote>
+    </div>
+
+  </div>
+</section>
+
+<!-- DÓNDE -->
+<section class="visit" id="visita">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-kicker script">Ven a vernos</p>
+      <h2 class="sec-title reveal-words">Dónde estamos</h2>
+    </header>
+
+    <div class="visit__grid">
+      <div>
+        <h3>Dirección</h3>
+        <address>C. del Aeroplano, 4, Local 2<br>03690 San Vicente del Raspeig<br>Alicante</address>
+        <div class="visit__links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Honu+Pok%C3%A9+C.+del+Aeroplano+4+Sant+Vicent+del+Raspeig" target="_blank" rel="noopener">Cómo llegar</a>
+          <a href="tel:+34865795988">865 79 59 88</a>
+          <a href="https://www.instagram.com/honu.poke/" target="_blank" rel="noopener">@honu.poke</a>
+        </div>
+        <p class="visit__note">Para llevar o a domicilio con Uber Eats. No se aceptan reservas.</p>
+      </div>
+
+      <div>
+        <h3>Horario</h3>
+        <p class="hours-line"><b>Todos los días</b><span>13:00–16:00</span><span>20:00–23:30</span></p>
+      </div>
+
+      <div class="visit__brand">
+        <img src="assets/img/sticker-square-green.png" alt="Honu Poke and More" loading="lazy" width="281" height="267">
+      </div>
+    </div>
+
+    <div class="order">
+      <div>
+        <h2>Para comer <em>aquí</em> o en casa</h2>
+        <p>Pásate por el local, llévatelo o pídelo con Uber Eats.</p>
+      </div>
+      <div class="order__btns">
+        <a class="btn" href="https://www.ubereats.com/es/store/honu-poke/i9mvTQm-RK2mBBhM6Uy6yA" target="_blank" rel="noopener"><span>Pedir en Uber Eats</span></a>
+        <a class="btn btn--ghost" href="tel:+34865795988"><span>Llamar</span></a>
+      </div>
+      <img class="sticker" src="assets/img/sticker-oval-yellow.png" alt="" loading="lazy" width="401" height="181">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot" id="contacto">
+  <div class="wrap">
+    <p class="foot__giant" aria-hidden="true">Be Honu!</p>
+    <div class="foot__row">
+      <span class="logo-word" role="img" aria-label="Honu Poke and More"></span>
+      <p class="foot__tag">Es saludable, pero sabe a capricho.</p>
+      <nav class="foot__nav" aria-label="Pie">
+        <a href="#carta" data-tab="t-casa">Carta</a>
+        <a href="#carta" data-tab="t-monta">Monta tu bowl</a>
+        <a href="#proceso">Cómo lo hacemos</a>
+        <a href="#visita">Dónde</a>
+      </nav>
+    </div>
+    <div class="foot__bar">
+      <p>© <span id="year">2026</span> Honu Poké &amp; More · C. del Aeroplano, 4, San Vicente del Raspeig</p>
+      <p><a href="#top">Volver arriba</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

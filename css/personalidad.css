@@ -1,0 +1,233 @@
+/* PERSONALIDAD · el lenguaje de los carteles de Honu Poké · grano de papel, ondas del logo, tiras rosa, · sellos, cards de colores y un gran "Be Honu!" · (se carga después de style.css y lo completa) */
+@font-face{ font-family:"Bagel Fat One"; src:url("../assets/fonts/bagel-latin.woff2") format("woff2"); font-display:swap }
+:root{ --fat:"Bagel Fat One","Anton",sans-serif }
+
+/* ---------- grano de papel sobre todo ---------- */
+body::after{
+  content:""; position:fixed; inset:0; z-index:300; pointer-events:none; opacity:.085;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:220px 220px;
+}
+
+/* ---------- ondas (la del logo) entre secciones ---------- */
+.carta,.proc,.revs,.visit,.foot{ position:relative }
+.carta::before,.proc::before,.revs::before,.visit::before,.foot::before{
+  content:""; position:absolute; left:0; right:0; top:-1px; height:22px; z-index:2; pointer-events:none;
+  background:var(--wv);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='22' viewBox='0 0 64 22'%3E%3Cpath d='M0 0H64V10Q48 22 32 10T0 10Z'/%3E%3C/svg%3E") repeat-x top left/64px 22px;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='22' viewBox='0 0 64 22'%3E%3Cpath d='M0 0H64V10Q48 22 32 10T0 10Z'/%3E%3C/svg%3E") repeat-x top left/64px 22px;
+}
+.carta{ --wv:var(--cream) }
+.carta::before{ transition:background .7s }
+.proc{ --wv:var(--green-deep) }
+.revs{ --wv:var(--green) }
+.visit{ --wv:var(--yellow) }
+.foot{ --wv:var(--cream) }
+
+/* ---------- HERO ---------- */
+.hero__title .l3{ display:block; padding:.06em .1em .1em; margin-left:-.1em; color:var(--yellow) }
+.strip{
+  display:inline-block; white-space:nowrap; background:var(--pink); color:var(--yellow); font-weight:400;
+  padding:.04em .16em 0; transform:rotate(-2.5deg); box-shadow:.05em .06em 0 var(--green-deep);
+}
+.hero__sun{ opacity:.13 }
+.leek{ position:absolute; z-index:1; top:10%; height:80%; width:auto; fill:var(--yellow) }
+.leek--l{ left:-78px } .leek--r{ right:-78px }
+@media (max-width:900px){ .leek{ height:66%; top:20% } .leek--l{ left:-40px } .leek--r{ right:-40px } }
+@media (max-width:440px){ .leek{ display:none } }
+
+/* sello giratorio sobre la banda */
+.band-wrap{ position:relative; height:0 }
+.stamp{
+  position:absolute; z-index:5; top:-78px; right:clamp(16px,6vw,96px); width:clamp(104px,12vw,150px);
+  animation:spin 22s linear infinite; filter:drop-shadow(0 10px 14px rgba(0,0,0,.3));
+}
+.stamp svg{ display:block; width:100% }
+.stamp__bg{ fill:var(--yellow) }
+.stamp__txt{ font-family:var(--fat); fill:var(--green) }
+@keyframes spin{ to{ transform:rotate(360deg) } }
+@media (max-width:640px){ .stamp{ top:-48px; width:92px } }
+
+
+/* CARTA con carácter */
+.deal{
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1.2rem 3rem; align-items:end; text-align:left;
+  max-width:1040px; margin:0 auto clamp(26px,4vw,44px); padding-bottom:clamp(18px,3vw,30px); border-bottom:4px solid var(--yellow);
+}
+.deal .script{ display:block; font-size:clamp(1.8rem,3.4vw,2.6rem); color:var(--pink); margin-bottom:.1em; transform:rotate(-3deg); transform-origin:left }
+.deal__eq{ margin:0; font-family:var(--display); text-transform:uppercase; font-size:clamp(2.4rem,6.6vw,5.2rem); line-height:.95; color:var(--yellow) }
+.deal__eq i{ font-style:normal; color:var(--cream); margin-inline:.12em }
+.deal__prices{ display:flex; gap:clamp(18px,3vw,44px); justify-content:flex-start; width:auto; font-size:inherit; letter-spacing:0 }
+.deal__prices p{ margin:0 }
+.deal__prices span{ display:block; font-family:var(--display); text-transform:uppercase; color:var(--yellow); font-size:1.2rem; letter-spacing:.05em }
+.deal__prices b{ font-family:var(--display); font-weight:400; font-size:clamp(3.6rem,8vw,6.6rem); line-height:.9; color:var(--pink) }
+.deal__prices em{ font-style:normal; font-family:var(--text); font-weight:300; color:var(--yellow); font-size:.7em; margin-left:.04em }
+@media (max-width:860px){ .deal{ grid-template-columns:minmax(0,1fr) } }
+
+/* carta de papel: lista tipográfica, nombre a la izquierda y detalle a la derecha */
+.pokes{ grid-template-columns:minmax(0,1fr); gap:0; max-width:940px }
+.poke{
+  display:grid; grid-template-columns:minmax(170px,.42fr) minmax(0,1fr); grid-template-areas:"n s" "n i" "n t"; column-gap:clamp(18px,4vw,56px); align-items:start;
+  padding:clamp(18px,2.4vw,28px) 0; background:none; border-radius:0; box-shadow:none; transform:none; color:var(--cream);
+  border-top:2px dotted color-mix(in srgb,var(--cream) 32%,transparent);
+}
+.pokes .poke:last-child{ border-bottom:2px dotted color-mix(in srgb,var(--cream) 32%,transparent) }
+.poke:nth-child(even) h3{ color:var(--cream) }
+.poke:hover{ transform:none; background:none; box-shadow:none }
+.poke h3{ grid-area:n; margin:0; display:block; font-size:clamp(2.6rem,5.4vw,4.4rem); line-height:.9; color:var(--yellow); transition:color var(--t-fast), transform var(--t-med) }
+.poke:hover h3{ color:var(--pink); transform:translateX(8px) }
+.poke__sauce{ grid-area:s; margin:.35rem 0 .3rem; color:var(--pink) }
+.poke p.poke__ing{ grid-area:i; margin:0; max-width:52ch; font-size:1.02rem; color:color-mix(in srgb,var(--cream) 84%,transparent) }
+.poke__tags{ grid-area:t }
+.poke__tags .hot{ background:var(--pink); color:var(--cream) }
+.poke__tags .veg{ background:var(--yellow); color:var(--green) }
+@media (max-width:640px){ .poke{ grid-template-columns:minmax(0,1fr); grid-template-areas:"n" "s" "i" "t" } .poke h3{ margin-bottom:.1rem } }
+
+/* sobre nosotros: una sola voz, descentrada */
+.about__run{ margin:clamp(10px,3vw,40px) 0 0 clamp(0px,11vw,170px); max-width:980px; padding-bottom:clamp(60px,8vw,110px) }
+.about__run p{ margin:0; font-family:var(--display); text-transform:uppercase; font-size:clamp(2rem,5.2vw,4.2rem); line-height:1.02 }
+.about__run span{ color:var(--green) }
+.about__run span:nth-child(3n+2){ color:var(--pink) }
+.about__run span:nth-child(3n+3){ color:var(--green-mid); opacity:.9 }
+.about__run .about__run-note{ margin-top:1.4rem; font-family:var(--text); text-transform:none; font-size:1.1rem; line-height:1.5; max-width:46ch; color:color-mix(in srgb,var(--green) 80%,transparent) }
+
+/* dónde: horario en una línea */
+.hours-line{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:.2rem 1rem; font-size:1.12rem }
+.hours-line b{ font-family:var(--display); font-weight:400; text-transform:uppercase; color:var(--pink); font-size:1.8rem; letter-spacing:.03em; width:100% }
+.visit__note{ margin:1.1rem 0 0; font-size:.95rem; opacity:.78; max-width:30ch }
+
+/* ---------- pedido / pie ---------- */
+.order h2 em{ display:inline-block; background:var(--pink); color:var(--yellow); padding:0 .12em; transform:rotate(-2deg); box-shadow:.04em .05em 0 var(--green-deep) }
+.foot__giant{
+  margin:0; padding-bottom:clamp(40px,6vw,80px); text-align:center; white-space:nowrap;
+  font-family:var(--display); text-transform:uppercase; font-size:clamp(5rem,24vw,22rem); line-height:.82; color:var(--pink); letter-spacing:-.01em;
+}
+
+
+/* ============================================================
+   WRAP: bloque propio, a sangre, en amarillo de cartel
+   ============================================================ */
+.reel--wrap{
+  background:var(--yellow); color:var(--green); border-top:0!important;
+  box-shadow:0 0 0 100vmax var(--yellow); clip-path:inset(0 -100vmax);
+  padding-block:clamp(56px,8vw,120px); margin-block:clamp(30px,5vw,70px);
+}
+.reel--wrap .reel__eyebrow{ color:var(--pink-deep); font-size:clamp(1.8rem,3.4vw,2.6rem); transform:rotate(-3deg); transform-origin:left }
+.reel__info .wrap__title{ font-size:clamp(5.4rem,16vw,12rem); line-height:.82; color:var(--green); margin:0 0 .5rem; letter-spacing:-.01em }
+.reel__info .wrap__title .strip{ display:block; width:max-content; max-width:100%; margin-top:.16em; font-size:.3em; line-height:1.05; padding:.1em .32em .02em; background:var(--pink); color:var(--yellow); transform:rotate(-2deg); box-shadow:.06em .07em 0 var(--green) }
+.wrap__price{ display:flex; flex-wrap:wrap; align-items:flex-end; gap:.2rem 1.3rem; margin:1.6rem 0 1.2rem }
+.wrap__price b{ font-family:var(--display); font-weight:400; font-size:clamp(4.2rem,9vw,7.2rem); line-height:.85; color:var(--pink) }
+.wrap__price em{ font-style:normal; font-family:var(--text); font-weight:300; color:var(--green); font-size:.62em; margin-left:.05em }
+.wrap__price span{ font-size:1rem; line-height:1.3; padding-bottom:.4rem; max-width:22ch }
+.reel--wrap .reel__lead{ color:color-mix(in srgb,var(--green) 88%,transparent) }
+.reel--wrap .steps li{ color:color-mix(in srgb,var(--green) 42%,transparent) }
+.reel--wrap .steps li.is-done{ color:color-mix(in srgb,var(--green) 72%,transparent) }
+.reel--wrap .steps li.is-now{ color:var(--green); font-weight:600 }
+.reel--wrap .steps li.is-now .steps__mark{ color:var(--pink) }
+.reel--wrap .arch--reel{ box-shadow:0 40px 60px -36px rgba(18,53,42,.7) }
+.reel--wrap .arch--reel::after{ box-shadow:inset 0 0 0 3px var(--green) }
+.reel--wrap .reel__bar{ background:color-mix(in srgb,var(--green) 18%,transparent) }
+.reel--wrap .reel__bar i{ background:var(--pink) }
+.reel--wrap .reel__btn{ background:var(--green); color:var(--yellow) }
+.reel--wrap .reel__ico{ background:var(--yellow) }
+.reel--wrap .reel__ico::after{ border-left-color:var(--green) }
+.wrap__cta{ margin-top:1.8rem }
+.wrap__heart{ position:absolute; z-index:5; width:clamp(78px,9vw,112px); top:-26px; right:-22px; transform:rotate(10deg); pointer-events:none; filter:drop-shadow(0 10px 14px rgba(18,53,42,.3)) }
+.wrap__oval{ position:absolute; z-index:5; width:clamp(120px,13vw,170px); bottom:44px; left:-34px; transform:rotate(-8deg); pointer-events:none; filter:drop-shadow(0 10px 14px rgba(18,53,42,.3)) }
+@media (max-width:820px){ .reel--wrap .reel__eyebrow{ margin-top:.4rem } .wrap__oval{ left:-12px } .wrap__heart{ right:-10px } }
+
+/* ============================================================
+   CHIPS DE "MONTA TU BOWL": etiquetas cortadas a mano,
+   se sellan con el color del paso y una tortuguita
+   ============================================================ */
+.chips{ gap:.6rem .55rem }
+.chip{
+  position:relative; border:2px solid color-mix(in srgb,var(--cream) 40%,transparent); box-shadow:none;
+  background:color-mix(in srgb,var(--cream) 7%,transparent); color:var(--cream);
+  padding:.5em 1.05em .46em; font-size:.98rem; font-weight:500; letter-spacing:.01em;
+  border-radius:12px 17px 11px 16px;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1), background .25s, color .25s, border-color .25s, box-shadow .25s, opacity .25s;
+}
+.chip:nth-child(3n+2){ border-radius:17px 11px 16px 12px }
+.chip:nth-child(3n+3){ border-radius:11px 16px 12px 17px }
+.chip:hover{ transform:translateY(-3px) rotate(-1.8deg); border-color:var(--yellow); box-shadow:none }
+.chip:nth-child(even):hover{ transform:translateY(-3px) rotate(1.6deg) }
+.chip[aria-pressed="true"]{
+  padding-left:.8em; font-weight:600; border-color:transparent;
+  background:var(--pink); color:var(--cream); box-shadow:3px 4px 0 var(--green-deep);
+  transform:rotate(-1.4deg);
+}
+.chip[aria-pressed="true"]:nth-child(even){ transform:rotate(1.2deg) }
+.step:nth-child(even) .chip[aria-pressed="true"]{ background:var(--yellow); color:var(--green) }
+.chip[aria-pressed="true"]::before{
+  content:""; display:inline-block; width:1.25em; height:.98em; margin-right:.42em; vertical-align:-.14em; background:currentColor;
+  -webkit-mask:url("../assets/img/turtle.png") center/contain no-repeat; mask:url("../assets/img/turtle.png") center/contain no-repeat;
+}
+.chip[aria-disabled="true"]{ opacity:.3; transform:none!important; border-style:dashed; box-shadow:none }
+.chip.is-pop{ animation:stamp .45s cubic-bezier(.34,1.56,.64,1) }
+@keyframes stamp{ 0%{ transform:scale(1.35) rotate(-6deg); opacity:.4 } 100%{ opacity:1 } }
+.step__n{ text-shadow:3px 3px 0 var(--green-deep) }
+.step__count{ padding:.1em .55em 0; border-radius:99px; background:color-mix(in srgb,var(--cream) 10%,transparent); font-size:1.05rem }
+.step.is-done .step__count{ background:var(--yellow); color:var(--green) }
+
+
+/* ============================================================
+   NAV con carácter: etiquetas cortadas, sello de pedido,
+   
+   ============================================================ */
+.nav__links{ gap:clamp(4px,1vw,12px) }
+.nav__links a{
+  padding:.4em .85em .3em; border-radius:7px 12px 8px 13px; color:var(--cream);
+  transition:background .25s, color .25s, transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+}
+.nav__links a::after{ display:none }
+.nav__links a:hover,.nav__links a:focus-visible{ background:var(--pink); color:var(--cream)!important; transform:rotate(-2.5deg) translateY(-1px); box-shadow:2px 3px 0 var(--green-deep) }
+.nav__links a:nth-child(even):hover,.nav__links a:nth-child(even):focus-visible{ transform:rotate(2deg) translateY(-1px) }
+.nav__links a.is-here{ background:var(--yellow); color:var(--green)!important; transform:rotate(-1.6deg); box-shadow:2px 3px 0 var(--green-deep) }
+.nav__links a.is-here:nth-child(even){ transform:rotate(1.4deg) }
+.nav.is-light .nav__links a.is-here{ background:var(--green); color:var(--yellow)!important }
+
+.nav__status{
+  padding:.38em .95em .3em; border-radius:99px; transform:rotate(-2deg);
+  font-family:var(--display); font-size:.82rem; letter-spacing:.08em; color:var(--cream);
+  background:color-mix(in srgb,var(--cream) 12%,transparent);
+}
+.nav__status b{ font-weight:400; color:var(--yellow) }
+.nav.is-light .nav__status{ color:var(--green); background:color-mix(in srgb,var(--green) 10%,transparent) }
+.nav.is-light .nav__status b{ color:var(--pink) }
+
+.nav__cta{ border-radius:50%/50%; padding:.72em 1.5em .62em; transform:rotate(-4deg); box-shadow:3px 3px 0 var(--green-deep) }
+.nav__cta:hover{ animation:wiggle .6s ease }
+@keyframes wiggle{ 0%,100%{ rotate:0deg } 25%{ rotate:7deg } 50%{ rotate:-6deg } 75%{ rotate:3deg } }
+.burger{ transition:transform .4s cubic-bezier(.34,1.56,.64,1), background var(--t-fast); box-shadow:2px 3px 0 var(--green-deep) }
+.burger:hover{ transform:rotate(-12deg) scale(1.07) }
+
+/* ============================================================
+   BOTONES con carácter: se inclinan como pegatinas, sueltan
+   sombra dura de cartel, una tortuga los cruza nadando y al
+   pulsar se aplastan contra el papel
+   ============================================================ */
+.btn{ --sh:var(--pink) }
+.btn--pink{ --sh:var(--yellow) }
+.btn:not(.nav__cta){
+  transition:transform .38s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, color .35s;
+}
+.btn:not(.nav__cta)::before{
+  content:""; position:absolute; z-index:2; top:50%; left:-2em; height:1.2em; aspect-ratio:225/179; opacity:0; pointer-events:none;
+  background:currentColor; transform:translateY(-50%) rotate(62deg);
+  -webkit-mask:url("../assets/img/turtle.png") center/contain no-repeat; mask:url("../assets/img/turtle.png") center/contain no-repeat;
+}
+.btn:not(.nav__cta):hover::before,.btn:not(.nav__cta):focus-visible::before{ animation:swim 1s ease-in-out }
+@keyframes swim{
+  0%{ left:-2em; opacity:0 } 15%{ opacity:.5 } 85%{ opacity:.5 } 100%{ left:calc(100% + .6em); opacity:0 }
+}
+.btn:not(.nav__cta):hover,.btn:not(.nav__cta):focus-visible{
+  transform:translate(-2px,-3px) rotate(-2deg); box-shadow:4px 6px 0 var(--sh);
+}
+.btn:not(.nav__cta):nth-child(even):hover,.btn:not(.nav__cta):nth-child(even):focus-visible{ transform:translate(-2px,-3px) rotate(1.8deg) }
+.btn--ghost:not(.nav__cta):hover,.btn--ghost:not(.nav__cta):focus-visible{ box-shadow:inset 0 0 0 2px var(--cream), 4px 6px 0 var(--sh) }
+.btn--line:not(.nav__cta):hover,.btn--line:not(.nav__cta):focus-visible{ box-shadow:inset 0 0 0 2px var(--green), 4px 6px 0 var(--sh) }
+.btn:not(.nav__cta):active{ transform:translate(1px,2px) rotate(0); box-shadow:0 0 0 var(--sh); transition-duration:.08s }
+.btn--ghost:not(.nav__cta):active{ box-shadow:inset 0 0 0 2px var(--cream), 0 0 0 var(--sh) }
+.btn--line:not(.nav__cta):active{ box-shadow:inset 0 0 0 2px var(--green), 0 0 0 var(--sh) }
+.nav__cta:active{ transform:rotate(-4deg) translate(1px,2px); box-shadow:0 0 0 var(--green-deep) }
